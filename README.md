@@ -1,6 +1,6 @@
 ### kcc-flashswap-arb
 
-An arbitrageur contract which utilizes flash swaps to arbitrage between Uniswap V2 AMMs & related forks
+An arbitrageur contract and typescript bot implementation that leverages flash swaps to arbitrage between Uniswap V2 AMMs & related forks
 
 #### The rationale
 
