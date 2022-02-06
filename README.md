@@ -48,7 +48,7 @@ For example:
 
 - Suppose pair0 and pair1 are two pairs of the same two tokens on different AMMs. Once the price diverges, we can exploit this inefficiency with our arbitrage bot.
 
-- We call the FlashBot contract to start arbitrage
+- We call the `FlashBot` contract to start arbitrage
 
 - The contract calculates the price denominated in the quote token.
 
@@ -75,12 +75,12 @@ So we get：
 
 ![img](https://i.ibb.co/y0FcRxf/A806-DABD-7-A56-4879-8074-D700-A010-A32-F.png)
 
-The amount borrowed in quote tokens, so Delta b1 = Delta b2, let x = \Delta b, then the profit as a function of x :
+The amount borrowed in quote tokens, so `Delta b1 = Delta b2, let x = \Delta b`, then the profit as a function of x :
 
 ![img](https://i.ibb.co/tHPkPHT/4-A5-FE15-F-12-FB-43-A8-B806-8-ABDE3-EA15-A8.png)
 
 
-We want to calculate the value of x, when the function gets a maximum value. First we need to get the derivative of function:
+We want to calculate the value of *X*, when the function gets a maximum value. First we need to get the derivative of function:
 
 ![img](https://i.ibb.co/v1F3DCT/E9-A77-C78-EBE1-47-B9-9-A22-A1-FB4082-F12-B.png)
 
@@ -108,42 +108,47 @@ The solution x is the amount we need to borrow from Pair0.
 
 #### Deploy the flash swap contract 📄 
 
-1. Edit network config in hardhat.config.ts.(It is currently configured for KCC, however you can also deploy to any EVM compatible chain)
+1. Edit network config in `hardhat.config.ts`.(It is currently configured for KCC, however you can also deploy to any EVM compatible chain)
 
 2. Copy the secret sample config：
 
-bash
+```bash
 $ cp .secret.ts.sample .secret.ts
 
+```
 
-3. Edit the private key and wallet address fields in above .secret config.
-
-
-4. Run the deploy.js script. By default, it deploys to KCC. If you want to dpeloy to a different network, you will need to change the network settings in hardhat.config.ts. You also need to change the WETH or other token address in the deploy.ts, it's Set to the WKCS address by default.
+3. Edit the `private key` and wallet address fields in above `.secret` config.
 
 
-bash
+4. Run the `deploy.js` script. By default, it deploys to KCC. If you want to dpeloy to a different network, you will need to change the network settings in `hardhat.config.ts`. You also need to change the WKCS or other token address in the `deploy.ts`, it's Set to the WKCS address by default.
+
+
+``` bash
 $ hardhart --network XXX run scripts/deploy.ts
 
+```
 
 For example,
 
+```bash
 $ npx hardhat --network kcc run scripts/deploy.ts
 
+```
 
 ### Bot implementation
 
-The contract function getProfit(address pool1, address pool2), can be used to calculate the maximum profit between two pairs(denominated in base token).
+The contract function `getProfit(address pool1, address pool2)`, can be used to calculate the maximum profit between two pairs(denominated in base token).
 
-The bot needs to call getProfit() to get the possible profit between token pairs. Once it is profitable, the bot calls flashArbitrage(pool1, pool2) to execute the arbitrage. The profit will will remain in the contract address until you withdraw.
+The bot needs to call `getProfit()` to get the possible profit between token pairs. Once it is profitable, the bot calls `flashArbitrage(pool1, pool2)` to execute the arbitrage. The profit will will remain in the contract address until you withdraw.
 
-Only the contract owner may call withdraw() to withdraw the profit.
+Only the contract owner may call `withdraw()` to withdraw the profit.
 
 #### To run the bot:
 
-bash
+``` bash
 $ sudo yarn bot
 
+```
 
 #### AMMs available on KCC
 
@@ -155,9 +160,10 @@ $ sudo yarn bot
 
 #### Testing
 
-bash
+``` bash
 $ hardhat test
 
+```
 
 ## FAQ
 
@@ -168,9 +174,9 @@ To be simple, this bot exploits the divergence in prices between different AMMs.
 
 #### How can I change the token pairs the bot is monitoring?
 
-Upon startup, the bot uses kccBaseTokens, kccQuoteTokens, and kccDexes in tokens.ts to automatically get all possible token pairs and saves them into kcc-pairs.json. This json file will be reused until you delete it.
+Upon startup, the bot uses `kccBaseTokens`, `kccQuoteTokens`, and `kccDexes` in `tokens.ts` to automatically get all possible token pairs and saves them into `kcc-pairs.json`. This json file will be reused until you delete it.
 
-If you want to reconfigure pairs, simply delete the kcc-pairs.json and edit the three variables above. Rerun the bot so it uses the new pairs. You can check the new pairs in kcc-pairs.json.
+If you want to reconfigure pairs, simply delete the `kcc-pairs.json` and edit the three variables above. Rerun the bot so it uses the new pairs. You can check the new pairs in kcc-pairs.json.
 
 #### Please note: 
 
