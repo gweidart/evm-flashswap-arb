@@ -16,7 +16,7 @@ There are a lot of AMMs on Ethereum and other blockchains that support EVM. Many
 - Sushi Swap(Ethereum)
 ...
 
-We can exploit this inefficiency, and arbitrage between these AMMs once the price of the same token pair diverges on different AMMs. We can exploit this inefficiency without ever risking more than a menial txn fee. 
+We can exploit this inefficiency, and arbitrage between these AMMs once the price of the same token pair diverges on different AMMs. All without ever risking more than a menial txn fee. 
 
 Flash Swaps are similar to Aave Flash Loans, which allow you to withdraw all the liquidity of any ERC20 token from Uniswap without any cost, given at the end of the transaction you either:
 
