@@ -15,7 +15,7 @@ const gasPrice = utils.parseUnits('3', 'gwei');
 const gasLimit = 300000;
 
 const VS_CURRENCY = 'currencies=usd'; // kccscan API key
-const kccScanUrl = `https://api.coingecko.com/api/v3/simple/price?ids=kucoin-shares&vs${VS_CURRENCY}`;
+const kccScanUrl = `https://api.coingecko.com/api/v3/simple/price?ids=kucoin-shares&vs_${VS_CURRENCY}`;
 
 const config: Config = {
   contractAddr: contractAddr,
