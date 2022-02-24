@@ -24,7 +24,7 @@ export async function getKcsPrice(): Promise<number> {
       return kcsPrice;
     }
     const res = await axios.get(config.kccScanUrl);
-    kcsPrice = parseFloat(res.data.result.ethusd);
+    kcsPrice = parseFloat(res.data['kucoin-shares'].usd);
     log.info(`KCS price: $${kcsPrice}`);
     return kcsPrice;
   });
