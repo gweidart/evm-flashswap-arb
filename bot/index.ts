@@ -14,7 +14,7 @@ function sleep(ms: number) {
 }
 
 async function calcNetProfit(profitWei: BigNumber, address: string, baseTokens: Tokens): Promise<number> {
-  let price = 1;
+  let price = await getKcsPrice();
   if (baseTokens.wkcs.address == address) {
     price = await getKcsPrice();
   }
