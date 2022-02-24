@@ -15,27 +15,27 @@ const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
 
 const kccBaseTokens: Tokens = {
   wkcs: { symbol: 'WKCS', address: '0x4446fc4eb47f2f6586f9faab68b3498f86c07521' },
-  usdt: { symbol: 'USDT', address: '0x0039f574ee5cc39bdd162e9a88e3eb1f111baf48' },
-  busd: { symbol: 'BUSD', address: '0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d' },
+  //usdt: { symbol: 'USDT', address: '0x0039f574ee5cc39bdd162e9a88e3eb1f111baf48' },
+  //busd: { symbol: 'BUSD', address: '0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d' },
 };
 
 const kccQuoteTokens: Tokens = {
   eth: { symbol: 'ETH', address: '0xf55af137a98607f7ed2efefa4cd2dfe70e4253b1' },
   btcb: { symbol: 'BTCK', address: '0xfa93c12cd345c658bc4644d1d4e1b9615952258c' },
-  alpha: { symbol: 'ALPHA', address: '0x0490c1076552ed3c91876ead9f6a547b389e69d4' },
-  zone: { symbol: 'ZONE', address: '0x32930590244e31a9e4bbda8ab743539af62f3c5a' },
+  //alpha: { symbol: 'ALPHA', address: '0x0490c1076552ed3c91876ead9f6a547b389e69d4' },
+  //zone: { symbol: 'ZONE', address: '0x32930590244e31a9e4bbda8ab743539af62f3c5a' },
   kus: { symbol: 'KUS', address: '0x4a81704d8c16d9fb0d7f61b747d0b5a272badf14' },
   mjt: { symbol: 'MJT', address: '0x2ca48b4eea5a731c2b54e7c3944dbdb87c0cfb6f' },
-  usdt: { symbol: 'USDT', address: '0x0039f574ee5cc39bdd162e9a88e3eb1f111baf48' },
-  usdc: { symbol: 'USDC', address: '0x980a5afef3d17ad98635f6c5aebcbaeded3c3430' },
+  //usdt: { symbol: 'USDT', address: '0x0039f574ee5cc39bdd162e9a88e3eb1f111baf48' },
+  //usdc: { symbol: 'USDC', address: '0x980a5afef3d17ad98635f6c5aebcbaeded3c3430' },
   kbnb: { symbol: 'BNB', address: '0x639a647fbe20b6c8ac19e48e2de44ea792c62c5c' },
   busd: { symbol: 'BUSD', address: '0xe3f5a90f9cb311505cd691a46596599aa1a0ad7d' },
-  koffee: { symbol: 'KOFFEE', address: '0xc0ffee0000921eb8dd7d506d4de8d5b79b856157' },
-  kudoge: { symbol: 'KUDOGE', address: '0x6665d66afa48f527d86623723342cfa258cb8666' },
-  tiku: { symbol: 'TIKU', address: '0xd4b52510719c594514ce7fed6cc876c03278ccf8' },
+  //koffee: { symbol: 'KOFFEE', address: '0xc0ffee0000921eb8dd7d506d4de8d5b79b856157' },
+  //kudoge: { symbol: 'KUDOGE', address: '0x6665d66afa48f527d86623723342cfa258cb8666' },
+  //tiku: { symbol: 'TIKU', address: '0xd4b52510719c594514ce7fed6cc876c03278ccf8' },
   link: { symbol: 'LINK', address: '0x47841910329aaa6b88d5e9dcde9000195151dc72' },
   cro: { symbol: 'CRO', address: '0x652d253b7ca91810a4a05acfc39729387c5090c0' },
-  zdex: { symbol: 'ZDEX', address: '0x461d52769884ca6235b685ef2040f47d30c94eb5' },
+  //zdex: { symbol: 'ZDEX', address: '0x461d52769884ca6235b685ef2040f47d30c94eb5' },
   twlt: { symbol: 'TWLT', address: '0x905bb6419948455847bef285485495fb570973b0' },
 };
 
