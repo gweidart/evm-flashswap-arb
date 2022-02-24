@@ -4,6 +4,7 @@
         "module": "commonjs",
         "strict": true,
         "esModuleInterop": true,
+        "useUnknownInCatchVariables": false,
         "outDir": "dist",
         "typeRoots": [
             "./typechain",
