@@ -36,7 +36,7 @@ function arbitrageFunc(flashBot: FlashBot, baseTokens: Tokens) {
     };
     try {
       res = await flashBot.getProfit(pair0, pair1);
-      log.debug(`Profit on ${pair.symbols}: ${ethers.utils.formatEther(res.profit)}`);
+      log.info(`Profit on ${pair.symbols}: ${ethers.utils.formatEther(res.profit)}`);
     } catch (err) {
       log.debug(err);
       return;
