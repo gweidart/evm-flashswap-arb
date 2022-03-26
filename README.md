@@ -8,14 +8,14 @@ An arbitrageur contract and typescript bot implementation that leverages flash s
 
 There are a lot of AMMs on Ethereum and other blockchains that support EVM. Many of these AMMs are just forks of UniswapV2 or share the same interface. A list of these AMMs:
 
-- AlphaSwap(KCC)
-- MojitoSwap(KCC)
-- Kuswap(KCC)
 - KsfSwap(KCC)
 - SpookySwap (FTM)
 - TraderJoe(AVAX)
 - Uniswap V2(Ethereum)
 - Sushi Swap(Ethereum)
+- MojitoSwap(KCC)
+- Kuswap(KCC)
+
 ...
 
 We can exploit this inefficiency, and arbitrage between these AMMs once the price of the same token pair diverges on different AMMs. All without ever risking more than a menial txn fee. 
@@ -151,14 +151,6 @@ Only the contract owner may call `withdraw()` to withdraw the profit.
 $ sudo yarn bot
 
 ```
-
-#### AMMs available on KCC
-
-- [AlphaSwap](https://swap.alphadao.money)
-- [MojitoSwap](https://mojitoswap.finance)
-- [ksfSwap](https://ksfswap.finance)
-- [Koffee Swap](https://koffeeswap.finance)
-- [Kuswap](https://kuswap.finance)
 
 #### Testing
 
