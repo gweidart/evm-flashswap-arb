@@ -1,6 +1,6 @@
 ### evm-flashswap-arb
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/cusdt-LINK/kcc-flashswap-arb/graphs/commit-activity) &nbsp; [![GitHub issues](https://img.shields.io/github/issues/cusdt-LINK/evm-flashswap-arb.svg)](https://GitHub.com/cusdt-LINK/kcc-flashswap-arb/issues/) &nbsp; ![GitHub last commit](https://img.shields.io/github/last-commit/cusdt-LINK/kcc-flashswap-arb?style=plastic) &nbsp; [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/cusdt-LINK/evm-flashswap-arb/graphs/commit-activity) &nbsp; [![GitHub issues](https://img.shields.io/github/issues/cusdt-LINK/evm-flashswap-arb.svg)](https://GitHub.com/cusdt-LINK/evm-flashswap-arb/issues/) &nbsp; ![GitHub last commit](https://img.shields.io/github/last-commit/cusdt-LINK/evm-flashswap-arb?style=plastic) &nbsp; [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org)
 
 #### 🚧 23 Nov 2022: This repo / codebase is officially being updated! 🚧
 
