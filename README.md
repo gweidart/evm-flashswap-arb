@@ -1,6 +1,6 @@
 ### evm-flashswap-arb
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/cusdt-LINK/evm-flashswap-arb/graphs/commit-activity) &nbsp; [![GitHub issues](https://img.shields.io/github/issues/cusdt-LINK/evm-flashswap-arb.svg)](https://GitHub.com/cusdt-LINK/evm-flashswap-arb/issues/) &nbsp; ![GitHub last commit](https://img.shields.io/github/last-commit/cusdt-LINK/evm-flashswap-arb?style=plastic) &nbsp; [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/cusdt-LINK/evm-flashswap-arb/graphs/commit-activity) &nbsp; [![GitHub issues](https://img.shields.io/github/issues/cusdt-LINK/evm-flashswap-arb.svg)](https://GitHub.com/cusdt-LINK/evm-flashswap-arb/issues/) &nbsp; ![GitHub last commit](https://img.shields.io/github/last-commit/cusdt-LINK/evm-flashswap-arb?style=plastic) &nbsp; ![](https://img.shields.io/github/forks/cusdt-LINK/evm-flashswap-arb) &nbsp; ![](https://img.shields.io/github/license/cusdt-LINK/evm-flashswap-arb) &nbsp; [![TypeScript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://typescriptlang.org)
 
 #### 🚧 23 Nov 2022: This repo / codebase is officially being updated! 🚧
 
@@ -11,7 +11,7 @@ In light of recent market events I have decided to completely restructure the co
 - UI
 - UX
 
-The project will remain FREE, open source, and of course **100% functional** during the update process. 
+The project will remain **FREE**, **open source**, and of course **100% functional** during the update process. 
 
 ___________________________________________
 An arbitrageur contract and typescript bot implementation that leverages flash swaps to arbitrage between Uniswap V2 AMMs & related forks
