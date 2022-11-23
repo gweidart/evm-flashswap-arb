@@ -18,15 +18,14 @@ An arbitrageur contract and typescript bot implementation that leverages flash s
 
 #### The rationale
 
-There are a lot of AMMs on Ethereum and other blockchains that support EVM. Many of these AMMs are just forks of UniswapV2 or share the same interface. A list of these AMMs:
+There are a lot of AMMs on Ethereum and other blockchains that support EVM. Many of these AMMs are just forks of UniswapV2 or share the same interface. A list of a few of these AMMs:
 
-- KsfSwap(KCC)
 - SpookySwap (FTM)
-- TraderJoe(AVAX)
-- Uniswap V2(Ethereum)
-- Sushi Swap(Ethereum)
-- MojitoSwap(KCC)
-- Kuswap(KCC)
+- TraderJoe (AVAX)
+- Uniswap V2 (Ethereum)
+- Sushi Swap (Ethereum)
+- Pancake Swap (BSC)
+- etc
 
 ...
 
@@ -46,23 +45,23 @@ If you were unable to meet either of the conditions mentioned above, the flash s
 
 This is possible because flash swaps are atomic Ethereum transactions.
 
-Suppose we'd like to arbitrage token pair ALPHA/WKCS. The ALPHA/WKCS pair must exists on multiple AMMs on KCC(or other EVM compatible blockchains such as FTM).
+Suppose we'd like to arbitrage token pair ETH/USDT. The ETH/USDT pair must exists on multiple AMMs on ETH(or other EVM compatible blockchains such as BSC).
 
-- We call WKCS as Base token. It can be any token with actual value such as USDT/USDC/DAI/BUSD...
+- We call USDT as the Base token. It can be any token with actual value such as USDT/USDC/DAI/BUSD...
 
-- We call ALPHA as Quote token. It can be any token even regardless of value. Quote tokens won't be reserved after arbitrage is executed.
+- We call ETH as the Quote token. It can be any token regardless of value. Quote tokens won't be reserved after the arbitrage is executed.
 
 - After arbitrage, only the base tokens are reserved. So our profit is denominate in the base token.
 
 - If two tokens in a pair can both be considered as base tokens. Either one can be reserved after arbitrage.
 
-The type of arbitrage referenced above can be done by using Uniswap V2 flashswap.
+The type of arbitrage referenced above can be done by using Uniswap V2's flashswap.
 
 For example:
 
 - Suppose pair0 and pair1 are two pairs of the same two tokens on different AMMs. Once the price diverges, we can exploit this inefficiency with our arbitrage bot.
 
-- We call the `FlashBot` contract to start arbitrage
+- We call the `FlashBot` contract to start the arbitrage
 
 - The contract calculates the price denominated in the quote token.
 
@@ -122,7 +121,7 @@ The solution x is the amount we need to borrow from Pair0.
 
 #### Deploy the flash swap contract 📄 
 
-1. Edit network config in `hardhat.config.ts`.(It is currently configured for KCC, however you can also deploy to any EVM compatible chain)
+1. Edit network config in `hardhat.config.ts`.(It is currently configured for ETH, however you can also deploy to any EVM compatible chain)
 
 2. Copy the secret sample config：
 
@@ -134,7 +133,7 @@ $ cp .secret.ts.sample .secret.ts
 3. Edit the `private key` and wallet address fields in above `.secret` config.
 
 
-4. Run the `deploy.js` script. By default, it deploys to KCC. If you want to dpeloy to a different network, you will need to change the network settings in `hardhat.config.ts`. You also need to change the WKCS or other token address in the `deploy.ts`, it's Set to the WKCS address by default.
+4. Run the `deploy.js` script. By default, it deploys to ETH. If you want to dpeloy to a different network, you will need to change the network settings in `hardhat.config.ts`. You also need to change the WKCS or other token address in the `deploy.ts`, it's Set to the WKCS address by default.
 
 
 ``` bash
@@ -145,7 +144,7 @@ $ hardhart --network XXX run scripts/deploy.ts
 For example,
 
 ```bash
-$ npx hardhat --network kcc run scripts/deploy.ts
+$ npx hardhat --network ETH run scripts/deploy.ts
 
 ```
 
@@ -180,9 +179,9 @@ To be simple, this bot exploits the divergence in prices between different AMMs.
 
 #### How can I change the token pairs the bot is monitoring?
 
-Upon startup, the bot uses `kccBaseTokens`, `kccQuoteTokens`, and `kccDexes` in `tokens.ts` to automatically get all possible token pairs and saves them into `kcc-pairs.json`. This json file will be reused until you delete it.
+Upon startup, the bot uses `ethBaseTokens`, `ethQuoteTokens`, and `ethDexes` in `tokens.ts` to automatically get all possible token pairs and saves them into `eth-pairs.json`. This json file will be reused until you delete it.
 
-If you want to reconfigure pairs, simply delete the `kcc-pairs.json` and edit the three variables above. Rerun the bot so it uses the new pairs. You can check the new pairs in kcc-pairs.json.
+If you want to reconfigure pairs, simply delete the `kcc-pairs.json` and edit the three variables above. Rerun the bot so it uses the new pairs. You can check the new pairs in eth-pairs.json.
 
 #### Please note: 
 
