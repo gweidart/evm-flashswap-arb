@@ -133,11 +133,11 @@ $ cp .secret.ts.sample .secret.ts
 3. Edit the `private key` and wallet address fields in above `.secret` config.
 
 
-4. Run the `deploy.js` script. By default, it deploys to ETH. If you want to dpeloy to a different network, you will need to change the network settings in `hardhat.config.ts`. You also need to change the WKCS or other token address in the `deploy.ts`, it's Set to the WKCS address by default.
+4. Run the `deploy.js` script. By default, it deploys to ETH. If you want to deploy to a different network, you will need to change the network settings in `hardhat.config.ts`. You also need to change the WKCS or other token address in the `deploy.ts`, it's Set to the WKCS address by default.
 
 
 ``` bash
-$ hardhart --network XXX run scripts/deploy.ts
+$ hardhat --network XXX run scripts/deploy.ts
 
 ```
 
